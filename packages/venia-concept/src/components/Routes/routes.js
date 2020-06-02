@@ -10,6 +10,7 @@ const CheckoutPage = lazy(() => import('@magento/venia-ui/lib/components/Checkou
 const CreateAccountPage = lazy(() => import('@magento/venia-ui/lib/components/CreateAccountPage'));
 const Search = lazy(() => import('@magento/venia-ui/lib/RootComponents/Search'));
 const Foo = lazy(() => import('../Foo'));
+const Gretting = lazy(() => import('../Gretting'));
 
 const Routes = () => {
     const { pathname } = useLocation();
@@ -18,6 +19,9 @@ const Routes = () => {
     return (
         <Suspense fallback={fullPageLoadingIndicator}>
             <Switch>
+                <Route exact path="/gretting">
+                    <Gretting name="MinhNV" />
+                </Route>
                 <Route exact path="/foo">
                     <Foo />
                 </Route>
