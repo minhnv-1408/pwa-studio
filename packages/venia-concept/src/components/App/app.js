@@ -5,7 +5,8 @@ import { useToasts } from '@magento/peregrine';
 import { useApp } from '@magento/peregrine/lib/talons/App/useApp';
 
 import { HeadProvider, Title } from '@magento/venia-ui/lib/components/Head';
-import Main from '@magento/venia-ui/lib/components/Main';
+import Main from '../Main';
+
 import Mask from '@magento/venia-ui/lib/components/Mask';
 import MiniCart from '@magento/venia-ui/lib/components/MiniCart';
 import Navigation from '@magento/venia-ui/lib/components/Navigation';
