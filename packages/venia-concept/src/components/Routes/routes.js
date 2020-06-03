@@ -11,6 +11,8 @@ const CreateAccountPage = lazy(() => import('@magento/venia-ui/lib/components/Cr
 const Search = lazy(() => import('@magento/venia-ui/lib/RootComponents/Search'));
 const Foo = lazy(() => import('../Foo'));
 const Gretting = lazy(() => import('../Gretting'));
+const Countries = lazy(() => import('../Countries'));
+const Country = lazy(() => import('../Country'));
 
 const Routes = () => {
     const { pathname } = useLocation();
@@ -19,6 +21,12 @@ const Routes = () => {
     return (
         <Suspense fallback={fullPageLoadingIndicator}>
             <Switch>
+                <Route exact path="/countries">
+                    <Countries />
+                </Route>
+                <Route path="/country/:id?">
+                    <Country />
+                </Route>
                 <Route exact path="/gretting">
                     <Gretting name="MinhNV" />
                 </Route>
